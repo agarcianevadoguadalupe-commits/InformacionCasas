@@ -84,7 +84,7 @@ const casas = [
         "Se acerca el invierno",
         ["Eddard", "Robb", "Sansa", "Arya", "Bran"],
         ["Honor", "Lealtad", "Tradición"],
-        "img/Stark.png"
+        "img/Stark.jpeg"
     ),
 
     new Casa(
@@ -94,7 +94,7 @@ const casas = [
         "Fuego y sangre",
         ["Daenerys", "Viserys", "Aegon"],
         ["Antigua dinastía real", "Dragones"],
-        "img/Targaryen.png"
+        "img/Targaryen.jpeg"
     ),
 
     new Casa(
@@ -104,7 +104,7 @@ const casas = [
         "Nuestra es la furia",
         ["Robert", "Stannis", "Renly"],
         ["Fuerza", "Orgullo", "Espíritu guerrero"],
-        "img/Baratheon.png"
+        "img/Baratheon.jpeg"
     ),
 
     new Casa(
@@ -114,7 +114,7 @@ const casas = [
         "Tan alto como el honor",
         ["Jon", "Robin"],
         ["Fortaleza montañosa", "Honor", "Defensa"],
-        "img/Arryn.png"
+        "img/Arryn.jpeg"
     ),
 
     new Casa(
@@ -124,7 +124,7 @@ const casas = [
         "¡Oye mi rugido!",
         ["Tywin", "Cersei", "Jaime", "Tyrion"],
         ["Riqueza", "Poder político", "Ambición"],
-        "img/Lannister.png"
+        "img/Lannister.jpeg"
     ),
 
     new Casa(
@@ -134,7 +134,7 @@ const casas = [
         "Nosotros no sembramos",
         ["Balon", "Theon", "Yara"],
         ["Navegación", "Independencia", "Tradición marinera"],
-        "img/Greyjoy.png"
+        "img/Greyjoy.jpeg"
     ),
 
     new Casa(
@@ -144,7 +144,7 @@ const casas = [
         "Familia, deber, honor",
         ["Hoster", "Edmure", "Catelyn"],
         ["Lealtad familiar", "Alianzas políticas"],
-        "img/Tully.png"
+        "img/Tully.jpeg"
     ),
 
     new Casa(
@@ -154,7 +154,7 @@ const casas = [
         "Crecer fuerte",
         ["Mace", "Margaery", "Olenna"],
         ["Riqueza agrícola", "Diplomacia", "Influencia"],
-        "img/Tyrell.png"
+        "img/Tyrell.jpeg"
     ),
 
     new Casa(
@@ -164,7 +164,7 @@ const casas = [
         "Nuestras hojas son afiladas",
         ["Roose", "Ramsay"],
         ["Crueldad", "Rivalidad con los Stark"],
-        "img/Bolton.png"
+        "img/Bolton.jpeg"
     ),
 
     new Casa(
@@ -174,6 +174,58 @@ const casas = [
         "Nunca doblegado, nunca roto",
         ["Doran", "Oberyn", "Trystane"],
         ["Independencia", "Orgullo", "Resistencia"],
-        "img/Martell.png"
+        "img/Martell.jpeg"
     )
 ];
+
+// RELLENAR DATOS
+
+casas.forEach(function(casa) {
+    const nombre = casa.getNombre();
+
+    const divCasa = document.getElementById("casa" + nombre);
+    const etiqueta = document.getElementById("et" + nombre);
+
+    etiqueta.classList.add("tarjetaCasa");
+
+    etiqueta.style.borderColor = getComputedStyle(divCasa).getPropertyValue("--color-casa").trim();
+
+    etiqueta.innerHTML = `
+        <h3>Casa ${casa.getNombre()}</h3>
+        <ul>
+            <li>Región: ${casa.getRegion()}</li>
+            <li>Emblema: ${casa.getEmblema()}</li>
+            <li>Lema: ${casa.getLema()}</li>
+            <li>Personajes: ${casa.getPersonajes().join(", ")}</li>
+            <li>Características: ${casa.getCaracteristicas().join(", ")}</li>
+        </ul>
+        <img src="${casa.getImg()}" alt="Casa ${nombre}">
+    `;
+
+    divCasa.addEventListener("mouseenter", function() {
+        etiqueta.style.display = "block";
+    });
+
+    divCasa.addEventListener("mouseleave", function() {
+        etiqueta.style.display = "none";
+    });
+});
+
+// CASAS OKUPADAS
+
+const casasOkupadas = [
+    document.getElementById("casaOkupada1"),
+    document.getElementById("casaOkupada2")
+];
+
+casasOkupadas.forEach(function(casa) {
+    const etiqueta = casa.querySelector(".etOkupada");
+
+    casa.addEventListener("mouseenter", function() {
+        etiqueta.style.display = "block";
+    });
+
+    casa.addEventListener("mouseleave", function() {
+        etiqueta.style.display = "none";
+    });
+});
