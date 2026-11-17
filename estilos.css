@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c8ad80;
+    min-height: 100vh;
+}
+
+main {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+main img {
+    display: block;
+    max-width: none;
+}
+
+#seleccionables {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#seleccionables div {
+    position: absolute;
+    cursor: pointer;
+}
+
+/* ---------- CASAS ---------- */
+
+#casaStark {
+    position: absolute;
+    background-color: white;
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 2px solid red;
+    width: 100px;
+    height: 100px;
+
+    top: 110px;
+    left: 615px;
+}
+
+#casaTargaryen {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+
+    top: 170px;
+    left: 325px;
+}
+
+#casaBaratheon {
+    position: absolute;
+    background-color: rgba(255, 215, 0, 0.5);
+    border: 2px solid gold;
+    width: 100px;
+    height: 100px;
+
+    top: 260px;
+    left: 758px;
+}
+
+#casaArryn {
+    position: absolute;
+    background-color: rgba(0, 100, 255, 0.5);
+    border: 2px solid blue;
+    width: 100px;
+    height: 100px;
+
+    top: 350px;
+    left: 298px;
+}
+
+#casaLannister {
+    position: absolute;
+    background-color: rgba(220, 20, 60, 0.5);
+    border: 2px solid crimson;
+    width: 100px;
+    height: 100px;
+
+    top: 400px;
+    left: 645px;
+}
+
+#casaGreyjoy {
+    position: absolute;
+    background-color: rgba(255, 140, 0, 0.5);
+    border: 2px solid darkorange;
+    width: 100px;
+    height: 100px;
+
+    top: 670px;
+    left: 255px;
+}
+
+#casaTully {
+    position: absolute;
+    background-color: rgba(0, 191, 255, 0.5);
+    border: 2px solid deepskyblue;
+    width: 100px;
+    height: 100px;
+
+    top: 745px;
+    left: 465px;
+}
+
+#casaTyrell {
+    position: absolute;
+    background-color: rgba(0, 180, 0, 0.5);
+    border: 2px solid green;
+    width: 100px;
+    height: 100px;
+
+    top: 730px;
+    left: 670px;
+}
+
+#casaBolton {
+    position: absolute;
+    background-color: rgba(128, 0, 128, 0.5);
+    border: 2px solid purple;
+    width: 100px;
+    height: 100px;
+
+    top: 1190px;
+    left: 570px;
+}
+
+#casaMartell {
+    position: absolute;
+    background-color: rgba(255, 100, 0, 0.5);
+    border: 2px solid orangered;
+    width: 100px;
+    height: 100px;
+
+    top: 1320px;
+    left: 295px;
+}
+
+#casaOkupada1 {
+    position: absolute;
+    background-color: rgba(255, 0, 255, 0.5);
+    border: 2px solid magenta;
+    width: 100px;
+    height: 100px;
+
+    top: 922px;
+    left: 282px;
+}
+
+#casaOkupada2 {
+    position: absolute;
+    background-color: rgba(0, 255, 255, 0.5);
+    border: 2px solid cyan;
+    width: 100px;
+    height: 100px;
+
+    top: 1350px;
+    left: 790px;
+}
